@@ -1,0 +1,3 @@
+train_data = ... 
+model = create_model()
+model.fit(train_data, epochs=20, validation_data=val_data)
