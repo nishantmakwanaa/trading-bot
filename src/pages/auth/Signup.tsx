@@ -19,7 +19,7 @@ export default function Signup() {
       setLoading(true);
       await signup(email, password, name);
       navigate('/user/dashboard');
-    } catch (err) {
+    } catch {
       setError('Failed to create an account');
     } finally {
       setLoading(false);

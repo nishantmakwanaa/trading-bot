@@ -1,4 +1,3 @@
-import React from 'react';
 import { BarChart2, ZoomIn, Download } from 'lucide-react';
 
 export default function Analysis() {
@@ -15,10 +14,10 @@ export default function Analysis() {
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-gray-800">Analysis View</h2>
               <div className="flex gap-2">
-                <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Zoom In">
                   <ZoomIn className="w-5 h-5 text-gray-600" />
                 </button>
-                <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors" title="Download">
                   <Download className="w-5 h-5 text-gray-600" />
                 </button>
               </div>
@@ -28,7 +27,6 @@ export default function Analysis() {
             </div>
           </div>
         </div>
-
         <div className="xl:col-span-1">
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-6">Analysis Tools</h2>

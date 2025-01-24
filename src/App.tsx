@@ -22,7 +22,6 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          {/* Redirect root to Dashboard */}
           <Route
             path="/"
             element={
@@ -31,8 +30,6 @@ function App() {
               </AppLayout>
             }
           />
-
-          {/* Other pages */}
           <Route
             path="/analysis"
             element={
@@ -65,8 +62,6 @@ function App() {
               </AppLayout>
             }
           />
-
-          {/* Redirect unknown routes to Dashboard */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

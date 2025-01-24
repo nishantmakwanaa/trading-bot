@@ -7,9 +7,7 @@ export default function Dashboard() {
         <h1 className="text-3xl font-bold text-gray-900">Trading Pattern Recognition</h1>
         <p className="text-gray-600">Real-time chart analysis and pattern detection</p>
       </header>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Chart Preview */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-gray-800">Live Chart</h2>
@@ -21,8 +19,6 @@ export default function Dashboard() {
             <BarChart2 className="w-16 h-16 text-gray-400" />
           </div>
         </div>
-
-        {/* Pattern Detection */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <h2 className="text-xl font-semibold text-gray-800 mb-6">Detected Patterns</h2>
           <div className="space-y-4">
@@ -44,8 +40,6 @@ export default function Dashboard() {
             ))}
           </div>
         </div>
-
-        {/* Alerts */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold text-gray-800">Recent Alerts</h2>
@@ -66,8 +60,6 @@ export default function Dashboard() {
             ))}
           </div>
         </div>
-
-        {/* Statistics */}
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <h2 className="text-xl font-semibold text-gray-800 mb-6">Analysis Statistics</h2>
           <div className="grid grid-cols-2 gap-4">

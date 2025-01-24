@@ -1,4 +1,3 @@
-import React from 'react';
 import { Monitor, Bell, Lock, Palette, Database, Activity } from 'lucide-react';
 
 export default function Settings() {
@@ -8,10 +7,8 @@ export default function Settings() {
         <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
         <p className="text-gray-600">Customize your trading pattern recognition experience</p>
       </header>
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
-          {/* Display Settings */}
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <div className="flex items-center gap-3 mb-6">
               <Monitor className="w-6 h-6 text-indigo-600" />
@@ -20,7 +17,7 @@ export default function Settings() {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg transition-colors">
                 <span className="text-gray-700">Chart Theme</span>
-                <select className="px-3 py-2 rounded-lg border border-gray-200">
+                <select aria-label="Chart Theme" className="px-3 py-2 rounded-lg border border-gray-200">
                   <option>Light</option>
                   <option>Dark</option>
                   <option>System</option>
@@ -28,7 +25,7 @@ export default function Settings() {
               </div>
               <div className="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg transition-colors">
                 <span className="text-gray-700">Default Timeframe</span>
-                <select className="px-3 py-2 rounded-lg border border-gray-200">
+                <select aria-label="Default Timeframe" className="px-3 py-2 rounded-lg border border-gray-200">
                   <option>1 Hour</option>
                   <option>4 Hours</option>
                   <option>1 Day</option>
@@ -36,8 +33,6 @@ export default function Settings() {
               </div>
             </div>
           </div>
-
-          {/* Analysis Settings */}
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <div className="flex items-center gap-3 mb-6">
               <Activity className="w-6 h-6 text-indigo-600" />
@@ -54,6 +49,8 @@ export default function Settings() {
                   <span className="text-gray-700">{setting}</span>
                   <button
                     className="w-12 h-6 rounded-full bg-indigo-600"
+                    aria-label={`Toggle ${setting}`}
+                    title={`Toggle ${setting}`}
                   >
                     <div className="w-4 h-4 rounded-full bg-white transform translate-x-7" />
                   </button>
@@ -62,9 +59,7 @@ export default function Settings() {
             </div>
           </div>
         </div>
-
         <div className="space-y-8">
-          {/* Quick Settings */}
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-6">Quick Settings</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -84,8 +79,6 @@ export default function Settings() {
               ))}
             </div>
           </div>
-
-          {/* System Info */}
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-6">System Info</h2>
             <div className="space-y-4">

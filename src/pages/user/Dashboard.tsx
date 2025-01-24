@@ -22,14 +22,13 @@ export default function UserDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <h1 className="text-2xl font-bold text-gray-900">User Dashboard</h1>
             
             <div className="flex items-center space-x-4">
-              <button className="p-2 text-gray-400 hover:text-gray-500">
+              <button className="p-2 text-gray-400 hover:text-gray-500" title="Notifications">
                 <Bell className="w-6 h-6" />
               </button>
               
@@ -48,9 +47,7 @@ export default function UserDashboard() {
           </div>
         </div>
       </header>
-
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        {/* Quick Stats */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { label: 'Total Patterns', value: '156', icon: TrendingUp, color: 'text-purple-600' },
@@ -75,10 +72,7 @@ export default function UserDashboard() {
             </div>
           ))}
         </div>
-
-        {/* Recent Activity & Settings */}
         <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
-          {/* Recent Activity */}
           <div className="bg-white overflow-hidden shadow-lg rounded-2xl">
             <div className="p-6">
               <h2 className="text-lg font-medium text-gray-900">Recent Activity</h2>
@@ -103,8 +97,6 @@ export default function UserDashboard() {
               </div>
             </div>
           </div>
-
-          {/* Quick Settings */}
           <div className="bg-white overflow-hidden shadow-lg rounded-2xl">
             <div className="p-6">
               <h2 className="text-lg font-medium text-gray-900">Quick Settings</h2>
@@ -117,6 +109,7 @@ export default function UserDashboard() {
                   <div key={index} className="flex items-center justify-between">
                     <span className="text-sm font-medium text-gray-700">{setting.name}</span>
                     <button
+                      title={setting.name}
                       className={`relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none ${
                         setting.enabled ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
@@ -133,8 +126,6 @@ export default function UserDashboard() {
             </div>
           </div>
         </div>
-
-        {/* Action Buttons */}
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <button
             onClick={() => navigate('/settings')}

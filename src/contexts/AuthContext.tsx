@@ -33,7 +33,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const signup = async (email: string, password: string, name: string) => {
+  const signup = async (email: string, name: string) => {
     if (email === 'x@gmail.com') {
       throw new Error('User already exists');
     }
@@ -59,7 +59,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (email !== 'x@gmail.com') {
       throw new Error('User not found');
     }
-    // In a real app, this would send a reset email
     console.log('Password reset email sent to:', email);
   };
 

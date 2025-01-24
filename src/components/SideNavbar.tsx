@@ -5,13 +5,10 @@ import { Home, BarChart2, Bell, Settings, LogOut } from 'lucide-react';
 export default function SideNavbar() {
   return (
     <nav className="h-full w-64 bg-white shadow-lg fixed top-0 left-0 flex flex-col p-6">
-      {/* Logo */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-indigo-600">TradeSmart</h1>
         <p className="text-gray-600 text-sm">Pattern Recognition</p>
       </div>
-
-      {/* Nav Links */}
       <ul className="space-y-4 flex-1">
         {[
           { to: '/', label: 'Dashboard', icon: <Home /> },
@@ -35,8 +32,6 @@ export default function SideNavbar() {
           </li>
         ))}
       </ul>
-
-      {/* Logout Button */}
       <button className="flex items-center px-4 py-3 rounded-lg text-gray-800 hover:bg-gray-100 transition-colors">
         <LogOut className="w-5 h-5 mr-3" />
         Logout

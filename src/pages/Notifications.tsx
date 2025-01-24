@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bell, BellOff, Settings } from 'lucide-react';
 
 export default function Notifications() {
@@ -58,6 +57,7 @@ export default function Notifications() {
                     <span className={setting.enabled ? 'text-gray-900' : 'text-gray-500'}>{setting.name}</span>
                   </div>
                   <button
+                    title={setting.enabled ? 'Disable' : 'Enable'}
                     className={`w-12 h-6 rounded-full transition-colors ${
                       setting.enabled ? 'bg-indigo-600' : 'bg-gray-200'
                     }`}
