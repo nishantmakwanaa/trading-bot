@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Settings, Bell, LogOut, ChevronDown, BarChart2, TrendingUp, AlertTriangle } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
