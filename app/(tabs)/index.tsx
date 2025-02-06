@@ -8,7 +8,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
       <ThemedView style={styles.content}>
-        <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+        <Image source={require('../../assets/images/icon.png')} style={styles.logo} />
         <ThemedText type="title">Welcome To Trading Bot</ThemedText>
       </ThemedView>
     </SafeAreaView>
